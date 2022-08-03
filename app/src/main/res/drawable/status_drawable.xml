@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_checked="false">
-        <shape android:shape="rectangle">
+    <item android:state_checked="true">
+        <shape android:shape="oval">
             <solid android:color="@color/purple_200"/>
             <corners android:radius="25dp"/>
         </shape>
     </item>
-    <item android:state_checked="true">
-        <shape android:shape="rectangle">
-            <solid android:color="@color/purple_200"/>
-            <corners android:radius="25dp"/>
-            <stroke android:color="#FF9800"
-                android:width="3dp"
-                android:dashGap="10dp"
-                android:dashWidth="30dp"/>
+    <item android:state_checked="false">
+        <shape android:shape="oval">
+            <solid android:color="@color/white"/>
+<!--            <solid android:color="@color/purple_200"/>-->
+<!--            <corners android:radius="25dp"/>-->
+<!--            <stroke android:color="#FF9800"-->
+<!--                android:width="3dp"-->
+<!--                android:dashGap="10dp"-->
+<!--                android:dashWidth="30dp"/>-->
+<!--            <padding android:left="3dp" android:top="3dp" android:right="3dp"-->
+<!--                android:bottom="3dp" />-->
         </shape>
     </item>
 </selector>

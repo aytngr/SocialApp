@@ -8,25 +8,28 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.socialapp.R
+import com.example.socialapp.model.Comment
 import com.example.socialapp.model.Status
 
-class StatusAdapter(private val mList: ArrayList<Status>): RecyclerView.Adapter<StatusAdapter.ViewHolder>() {
+class CommentAdapter(private val mList: ArrayList<Comment>): RecyclerView.Adapter<CommentAdapter.ViewHolder>() {
     private lateinit var view: View
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        view = LayoutInflater.from(parent.context).inflate(R.layout.status,parent,false)
+        view = LayoutInflater.from(parent.context).inflate(R.layout.comment,parent,false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val status = mList[position]
+        val comment = mList[position]
 
-        holder.statusIcon.setImageResource(status.icon!!)
-        holder.statusName.text = status.name
+        holder.commentIcon.setImageResource(comment.icon!!)
+        holder.commentName.text = comment.name
+        holder.commentText.text = comment.comment
     }
     class ViewHolder(ItemView: View): RecyclerView.ViewHolder(ItemView){
-        var statusIcon: ImageView = itemView.findViewById(R.id.status_icon)
-        var statusName: TextView = itemView.findViewById(R.id.status_name)
+        var commentIcon: ImageView = itemView.findViewById(R.id.comment_icon)
+        var commentName: TextView = itemView.findViewById(R.id.comment_name)
+        var commentText: TextView = itemView.findViewById(R.id.comment_text)
     }
 
     override fun getItemCount(): Int {

@@ -6,8 +6,9 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Post (
-    @ColumnInfo(name = "image") val image: String?,
-    @ColumnInfo(name = "author") val author: String?,
+    @ColumnInfo(name = "icon") val icon: Int?,
+    @ColumnInfo(name = "name") val name: String?,
+    @ColumnInfo(name = "image") val image: Int?,
     @ColumnInfo(name = "like_count") val like_count: Int?,
     @ColumnInfo(name = "liked") var liked: Boolean = false,
     @PrimaryKey(autoGenerate = true)
